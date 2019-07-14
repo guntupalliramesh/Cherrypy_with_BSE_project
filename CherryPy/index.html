@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BSE</title>
+</head>
+<body bgcolor="#ffb78a">
+<style>
+    li{
+        color: white;
+        list-style-type: none;
+    }
+    marquee{
+        color: blue;
+        font-family: Rockwell;
+        font-size: 50px;
+        background-color: blanchedalmond;
+    }
+</style>
+    <marquee behaviour="scroll">BSE_India_StockMarket</marquee>
+
+<div style="float: left">
+<table border="2" bgcolor="#2f4f4f" style="color: #3bff57">
+    <thead><h2 style="background-color: gold">Total File Fields & Stock Entries</h2></thead>
+    <tr bgcolor="#2e8b57">
+        <th>NAME</th>
+        <th>CODE</th>
+        <th>OPEN</th>
+        <th>HIGH</th>
+        <th>LOW</th>
+        <th>CLOSE</th>
+        <th>LAST</th>
+        <th>PREVCLOSE</th>
+    </tr>
+    <tr>
+        <td>
+            {% for val in name %}
+                <li>{{val}}</li>
+            {% endfor %}
+        </td>
+        <td>
+            {% for val in code %}
+                <li>{{val}}</li>
+            {% endfor %}
+        </td>
+        <td>
+            {% for val in open %}
+                <li>{{val}}</li>
+        {% endfor %}
+        </td>
+        <td>
+            {% for val in high %}
+                <li>{{val}}</li>
+            {% endfor %}
+        </td>
+        <td>
+            {% for val in low %}
+                <li>{{val}}</li>
+        {% endfor %}
+        </td>
+        <td>
+        {% for val in close %}
+            <li>{{val}}</li>
+        {% endfor %}
+        </td>
+        <td>
+        {% for val in last %}
+            <li>{{val}}</li>
+        {% endfor %}
+        </td>
+        <td>
+        {% for val in prev %}
+            <li>{{val}}</li>
+        {% endfor %}
+        </td>
+    </tr>
+</table>
+</div>
+<div style="float: left">
+<table bgcolor="#696969" border="2" style="color: crimson">
+    <thead><h2 style="background-color: khaki">Top_10_Stock Entries</h2></thead>
+    <tr bgcolor="#dcdcdc">
+        <th>NAME</th>
+        <th>CODE</th>
+        <th>OPEN</th>
+        <th>HIGH</th>
+        <th>LOW</th>
+        <th>CLOSE</th>
+        <th>LAST</th>
+        <th>PREVCLOSE</th>
+    </tr>
+    <tr>
+        <td>
+            {% for da in top_name %}
+                <li>{{da}}</li>
+            {%endfor%}
+        </td>
+        <td>
+            {% for da in top_code %}
+                <li>{{da}}</li>
+            {%endfor%}
+        </td>
+        <td>
+            {% for da in top_open %}
+                <li>{{da}}</li>
+            {%endfor%}
+        </td>
+        <td>
+            {% for db in top_high %}
+                <li>{{db}}</li>
+            {% endfor %}
+        </td>
+        <td>
+            {% for db in top_low %}
+                <li>{{db}}</li>
+            {% endfor %}
+        </td>
+        <td>
+            {% for db in top_close %}
+                <li>{{db}}</li>
+            {% endfor %}
+        </td>
+        <td>
+            {% for db in top_last %}
+                <li>{{db}}</li>
+            {% endfor %}
+        </td>
+        <td>
+            {% for db in top_prev %}
+                <li>{{db}}</li>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
